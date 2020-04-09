@@ -15,6 +15,8 @@ public class AppTest
      *
      * @param testName name of the test case
      */
+
+
     public AppTest( String testName )
     {
         super( testName );
@@ -32,7 +34,9 @@ public class AppTest
      * Rigourous Test :-)
      */
     public void testApp()
-    {
-        assertTrue( true );
+    {   CheckEven obj = new CheckEven();
+        assertTrue( true==obj.check(4));
+        assertTrue(false==obj.check(5));
     }
+    
 }
