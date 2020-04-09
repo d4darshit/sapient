@@ -33,10 +33,17 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+    CheckEven ch = new CheckEven();
     public void testApp()
-    {   CheckEven obj = new CheckEven();
-        assertTrue( true==obj.check(4));
-        assertTrue(false==obj.check(5));
+    {   
+        assertTrue( ch.check(0)==true);
+        assertTrue(ch.check(1)==false);
+
+    }
+
+    public void checkEven()
+    {
+        assertTrue(ch.check(2)==true);
     }
     
 }
