@@ -1,4 +1,2 @@
-# Sapient Assignment
-
-## week1 
-    A simple Maven project 
+# Week1 
+##    A simple Maven project 
