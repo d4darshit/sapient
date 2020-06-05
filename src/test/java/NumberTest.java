@@ -2,6 +2,7 @@ import com.sapient.Number;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,7 @@ class NumberTest {
 	
 	@Test
 	public void checkPrimeReturnTrue() {
-		assertTrue(1,ob.checkPrime(10));
+		Assertions.assertEquals(1,ob.checkPrime(10));
 	}
 	
 	@AfterEach
