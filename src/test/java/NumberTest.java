@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -15,17 +15,30 @@ class NumberTest {
 		
 		ob = new Number();
 	}
+	
 	@Test
 	public void checkPrimeReturnTrue() {
-		Assertions.assertEquals(1,ob.checkPrime(11));
+		Assertions.assertEquals(true,ob.checkPrime(5));
 	}
+	
 	@Test
 	public void checkPrimeReturnFalse() {
-		Assertions.assertEquals(0, ob.checkPrime(10));
+		Assertions.assertEquals(false, ob.checkPrime(10));
 	}
+	
 	@Test
 	public void checkArmStrongWhenNumberIsArmstrong() {
-		assertTrue(true==ob.checkArmstrong(153));
+		Assertions.assertEquals(true,ob.checkArmstrong(153));
+	}
+	
+	
+	@Test
+	public void checkArmStrongWhenNumberIsNotAnArmstrong() {
+		assertEquals(false,ob.checkArmstrong(150));
+	}
+	@Test
+	public void checlPalindromeReturnTrueWehnPalindrom() {
+		assertEquals(true, ob.checkPalindrome(121));
 	}
 	
 	@AfterEach
