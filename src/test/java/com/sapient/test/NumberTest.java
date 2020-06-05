@@ -1,3 +1,4 @@
+package com.sapient.test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.AfterEach;
@@ -30,20 +31,22 @@ class NumberTest {
 	public void checkArmStrongWhenNumberIsArmstrong() {
 		Assertions.assertEquals(true,ob.checkArmstrong(153));
 	}
-	
-	
+
 	@Test
 	public void checkArmStrongWhenNumberIsNotAnArmstrong() {
 		assertEquals(false,ob.checkArmstrong(150));
 	}
+
 	@Test
 	public void checkPalindromeReturnTrueWehnPalindrome() {
 		assertEquals(true, ob.checkPalindrome(121));
 	}
+	
 	@Test
 	public void checkPalindromeReturnFalseWhenNotAPalindrome() {
 		assertEquals(false,ob.checkArmstrong(12));
 	}
+	
 	
 	@AfterEach
 	public void destroyNumberObject() {
