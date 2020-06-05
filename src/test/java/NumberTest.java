@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +23,10 @@ class NumberTest {
 	public void checkPrimeReturnFalse() {
 		Assertions.assertEquals(0, ob.checkPrime(10));
 	}
-	
+	@Test
+	public void checkArmStrongWhenNumberIsArmstrong() {
+		assertTrue(true==ob.checkArmstrong(153));
+	}
 	
 	@AfterEach
 	public void destroyNumberObject() {
