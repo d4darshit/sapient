@@ -28,6 +28,26 @@ public class Number {
 		
 		return false;
 	}
+
+	public boolean checkPalindrome(int i) {
+		String s = new Integer(i).toString();
+		int n = s.length();
+		int start=0,end=n-1;
+		while(start<end) {
+			if(s.charAt(start)==s.charAt(end))
+			{
+				start++;
+				end--;
+			}
+			else {
+				return false;
+			}
+		}
+		
+		return true;
+		
+		
+	}
 	
 	
 

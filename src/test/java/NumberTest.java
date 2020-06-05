@@ -37,8 +37,12 @@ class NumberTest {
 		assertEquals(false,ob.checkArmstrong(150));
 	}
 	@Test
-	public void checlPalindromeReturnTrueWehnPalindrom() {
+	public void checkPalindromeReturnTrueWehnPalindrome() {
 		assertEquals(true, ob.checkPalindrome(121));
+	}
+	@Test
+	public void checkPalindromeReturnFalseWhenNotAPalindrome() {
+		assertEquals(false,ob.checkArmstrong(12));
 	}
 	
 	@AfterEach
