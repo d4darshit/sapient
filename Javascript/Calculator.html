@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<style>
+			input{
+				max-width:180px;
+				padding: 5px;
+			
+			}
+			div{
+				margin: 5px;
+				font-weight: bold;
+
+				border: 5px solid black;
+				height: 20px;
+				max-width: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<form>
+				<input
+					type="text"
+					name="num1"
+					id="num1"
+					placeholder="Number1"
+				/><br />
+				<input
+					type="text"
+					name="num2"
+					id="num2"
+					placeholder="Number2"
+				/><br />
+				Select operation<br />
+				<input type="radio" onclick="add();" />ADD<br />
+				<input type="radio" onclick="sub();" />SUB<br />
+				<input type="radio"  onclick="mul();"/>MUL<br />
+				<input type="radio"  onclick="div();"/>DIV<br />
+				<div id="res" ></div>
+				
+			</form>
+		</center>
+	</body>
+</html>
+<script>
+	
+	function add(){
+		var a = Number(document.getElementById("num1").value);
+		var b= Number(document.getElementById("num2").value);
+			document.getElementById("res").innerHTML = a+b;
+	}
+	function sub(){
+		var a = Number(document.getElementById("num1").value);
+	var b= Number(document.getElementById("num2").value);
+			document.getElementById("res").innerHTML = a-b;
+	}
+	function  mul(){
+		var a = Number(document.getElementById("num1").value);
+	var b= Number(document.getElementById("num2").value);
+			document.getElementById("res").innerHTML = a*b;
+	}
+	function div(){
+		var a = Number(document.getElementById("num1").value);
+	var b= Number(document.getElementById("num2").value);
+			document.getElementById("res").innerHTML = a/b;
+	}
+</script>

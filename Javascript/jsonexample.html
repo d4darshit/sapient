@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .table{
+                width: 100%;
+                margin:5px;
+            }  
+            table {
+                    top:50%;
+                    width: 100%;
+                    align-content: center;
+                    border-collapse: collapse;
+            }
+
+            th {
+                 height: 50px;
+            }
+            table, th, td {
+                    border: 1px solid black;
+            }
+            td{
+                padding: 10px;;
+            }
+            tr:nth-child(even) {background-color: #f2f2f2;}
+            
+            #searchresult{
+                margin-top: 20px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>JSON example</h1>
+        
+       Enter id: <input type="number" id="num" />
+        Enter Name: <input type = "text" id ="name"/>
+            <button onclick="addData();">Enter data</button>
+            <button onclick="showData();">Show employee data</button>
+        </center>
+        <div class="table">
+        <table id="res">
+            
+        </table>            
+        </div>
+        <center>        
+            <div class="seachbox">
+            <h2>Search Employee</h2>
+            Enter Employee name: <input type="text" id = "search"/>
+            <button onclick="search();">Search</button>
+            <div id="searchresult">
+               
+            </div>
+        </div>
+    </center>
+
+    <script>
+        var emp_data = {"employee":[]};
+        function addData(){
+            var name = document.getElementById("name").value;
+            var ID = Number(document.getElementById("num").value);
+            console.log(name);
+            console.log(ID);
+            emp_data["employee"].push({ID,name});
+            console.log(emp_data);
+        }
+        function showData(){ 
+            var response = "<table><tr><th>Id</th><th> Name</th></tr>"
+            for(i=0;i<emp_data["employee"].length;i++)
+            {
+                response = response + "<tr><td>"+emp_data["employee"][i].name+"</td><td>"+emp_data["employee"][i].ID+"</td>";
+            }
+            response = response + "</table>";
+            document.getElementById("res").innerHTML = response;
+        }
+        function search(){
+            var name = document.getElementById("search").value; 
+           var wr= document.getElementById("searchresult");
+           console.log("start");
+            for(i=0;i<emp_data["employee"].length;i++)
+            {
+
+                if(name == emp_data["employee"][i].name)
+                {
+                    document.getElementById("searchresult").innerHTML = "<h3>Found! Id: "+emp_data["employee"][i].ID+"</h2>";
+                    return;
+                }
+            }
+            document.getElementById("searchresult").innerHTML = "Not found"; 
+            
+        }
+    </script>
+    </body>
+</html>
