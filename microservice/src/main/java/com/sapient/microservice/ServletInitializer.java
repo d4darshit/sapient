@@ -1,0 +1,19 @@
+package com.sapient.microservice;
+
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+public class ServletInitializer extends SpringBootServletInitializer {
+
+	public ServletInitializer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		
+		return application.sources(MicroserviceApplication.class);
+		
+	}
+
+}
